@@ -1,0 +1,14 @@
+<%- include("./particles/head.ejs")%>
+<body>
+    <center>
+        <h1 class="header">NoteShare</h1>
+        <h1>You are now editing <%= title %></h1>
+        <form action="/edit/<%= title %>" method="post">
+            <textarea name="content" id="content" placeholder="Content of your notebook here..."  required><%= content %></textarea>
+            <br><br>
+            <button>Modify!</button>
+        </form>
+    </center>
+    <%- include("./particles/footer.ejs")%>
+</body>
+</html>

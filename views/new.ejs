@@ -1,0 +1,16 @@
+<%- include("./particles/head.ejs")%>
+<body>
+    <center>
+        <h1 class="header">NoteShare</h1>
+        <h1>You are now creating a new notebook</h1>
+        <form action="/new" method="post">
+            <input name="name" type="text" placeholder="Name of your notebook..." required/><br><br>
+            <textarea name="content" id="content" placeholder="Content of your notebook here..." required></textarea>
+            <br><br>
+            <button>Create!</button>
+            <p><%= backend %></p>
+        </form>
+    </center>
+    <%- include("./particles/footer.ejs")%>
+</body>
+</html>

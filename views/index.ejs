@@ -1,0 +1,17 @@
+<%- include("./particles/head.ejs")%>
+<body>
+    <center>
+        <h1 class="header">NoteShare</h1>
+        <a href="/new"><button>Create new notebook</button></a>
+        <h1>Existing notebooks:</h1>
+            <% rows.forEach((row) => {%>
+                <div class="list">
+                    <a href="/view/<%= row.name %>"><button class="books"><%= row.name %></button></a>
+                    <a href="/edit/<%= row.name %>"><img  src="/public/edit.png"/></a>
+                    <a href="/delete/<%= row.name %>"><img  src="/public/delete.png"/></a>
+                </div>
+            <% }); %>
+    </center>
+    <%- include("./particles/footer.ejs")%>
+</body>
+</html>
